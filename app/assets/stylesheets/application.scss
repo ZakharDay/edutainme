@@ -1,3 +1,13 @@
 @import "compass/css3";
 @import "compass/reset";
-@import "welcome";
+
+@import "vars";
+@import "mixins";
+
+@import "basics";
+@import "title";
+@import "sections";
+@import "changes";
+@import "authors";
+@import "share";
+

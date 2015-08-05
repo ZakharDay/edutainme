@@ -1,0 +1,38 @@
+#sign {
+  background-color: #252525;
+  overflow: auto;
+  text-align: center;
+
+  h2, p, a {
+    color: white;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: 140px;
+    margin-bottom: 40px;
+    @include ptsans(70px, bold);
+    line-height: 80px;
+  }
+
+  p {
+    @include ptsans(28px);
+    line-height: 45px;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 78px;
+    margin-bottom: 146px;
+    padding: 40px 148px;
+    background-color: $blue;
+
+    @include ptsans(36px, bold);
+    line-height: 40px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

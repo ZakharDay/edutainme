@@ -1,0 +1,45 @@
+html, body {
+  @include georgia();
+  @include box-sizing(border-box)
+}
+
+.patterned {
+  background: image-url("pattern.png");
+  background-size: 200%;
+  background-position: -1110px -60px;
+  background-repeat: repeat;
+}
+
+.centered {
+  margin: auto;
+
+  &.content {
+    width: $sectionContentWidth;
+  }
+
+  &.table {
+    width: 785px;
+  }
+}
+
+.bordered {
+  border: 15px solid $blue;
+  padding: 117px 122px 105px 115px
+}
+
+
+.bouncy:hover {
+
+  @keyframes bounce {
+    50%   { @include transform(translate(0, 10px)) }
+    100%  { @include transform(translate(0, 0))    }
+  }
+  animation-name: bounce;
+  animation-duration: 1250ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+.blue{
+  color: $blue;
+}

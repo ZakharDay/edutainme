@@ -1,0 +1,147 @@
+#header {
+  padding-bottom: 164px;
+  header {
+    padding: 55px 55px 0;
+
+    span {
+      @include ptsans(23px, bold);
+
+
+      a {
+        color: black;
+        text-decoration: none;
+        letter-spacing: 1px;
+
+        &.active {
+          color: $blue;
+          cursor: not-allowed;
+        }
+
+        &:not(.active):hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .burgerButton {
+      display: inline-block;
+      width: 35px;
+      float:right;
+      cursor: pointer;
+
+      div {
+        height: 3px;
+        background-color: black;
+
+        @include transition(all 250ms ease-in);
+
+        &:nth-child(2) {
+          margin: 6px 0;
+        }
+      }
+
+      &:hover div {
+        background-color: $blue;
+
+        &:nth-child(1) {
+          @include transform(translate(0, -2px))
+        }
+
+        &:nth-child(3) {
+          @include transform(translate(0, 2px))
+        }
+      }
+    }
+  }
+}
+
+#atf {
+
+  h1 {
+    margin: 120px auto 107px;
+    width: 984px;
+    @include ptsans(110px, bold);
+    line-height: 122px;
+    letter-spacing: 2px;
+
+    .inlineImg {
+      display: inline-block;
+      position: relative;
+      width: 192px;
+
+      img {
+        position: absolute;
+        bottom: -15px;
+        left: -11px;
+      }
+    }
+
+    .inlineText {
+      display: inline-block;
+      position: relative;
+      height: 45px;
+      border-left: 2px solid gray;
+      width: 295px;
+      margin-left: -17px;
+      margin-bottom: 6px;
+      padding-bottom: 6px;
+
+      small {
+        margin-left: 18px;
+        position: absolute;
+        display: block;
+        @include ptsans(18px);
+        letter-spacing: 0;
+        line-height: 30px;
+
+
+        a {
+          color: $blue;
+        }
+      }
+    }
+  }
+
+  .chevron {
+    display: block;
+    width: 36px;
+    margin-bottom: 205px;
+  }
+
+}
+
+#preface {
+
+  h2 {
+    margin-bottom: 45px;
+    @include ptsans(70px, bold);
+    line-height: 80px;
+  }
+
+  p {
+    @include ptsans(28px);
+    line-height: 45px;
+    margin-bottom: 46px;
+  }
+
+  a {
+    display: block;
+    position: relative;
+    margin-top: 50px;
+    @include ptsans(36px, bold);
+    text-decoration: none;
+    color: black;
+    @include transition(all 250ms ease-in);
+
+    &:hover {
+      color: $blue;
+    }
+
+    img {
+      position: absolute;
+      margin-top: 17px;
+      margin-left: 12px;
+    }
+  }
+
+}

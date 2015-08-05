@@ -1,0 +1,57 @@
+
+#changes {
+  margin-bottom: 260px;
+
+  h3 {
+    margin-top: 595px;
+    @include ptsans(100px, bold);
+    line-height: 110px;
+    margin-bottom: 120px;
+  }
+
+  h4 {
+    margin-bottom: 53px;
+    text-align: center;
+    @include georgia(38px, normal, italic);
+    line-height: 50px;
+  }
+
+  table {
+    margin-bottom: 120px;
+    th, td {
+      border-bottom: 2px solid gray;
+      line-height: 133px;
+
+      &.arrow {
+        width: 85px;
+
+        img {
+          display: block;
+          margin: auto;
+        }
+      }
+
+      &:not(.arrow) {
+        width: 350px;
+      }
+    }
+
+    th {
+      @include ptsans(50px, bold);
+      text-align: center;
+    }
+
+    td {
+      padding: 45px 0;
+      @include georgia(28px);
+      line-height: 45px;
+
+      &:first-child {
+        padding-right: 68px;
+      }
+      &:last-child {
+        padding-left: 68px;
+      }
+    }
+  }
+}
