@@ -1,0 +1,38 @@
+#menu {
+  position: fixed;
+  display: none;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  width: 720px;
+  background-color: black;
+
+
+  header {
+    padding: 40px;
+
+    img {
+      float: right;
+      cursor: pointer;
+    }
+  }
+
+  nav {
+    display: block;
+    margin-bottom: 116px;
+
+    a {
+      display: block;
+      padding: 38px 118px ;
+
+      @include ptsans(30px, bold);
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        background-color: $blue;
+      }
+    }
+  }
+}

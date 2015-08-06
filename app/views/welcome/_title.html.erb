@@ -3,11 +3,12 @@
     <span>
       <%= link_to "RU", "#", class: "active" %> / <%= link_to "ENG", "#" %>
     </span>
-    <a class="burgerButton">
+    <a class="burgerButton" id="menuButton">
       <div></div>
       <div></div>
       <div></div>
     </a>
+    <%= render "menu" %>
   </header>
 
   <div class="centered" id="atf">
