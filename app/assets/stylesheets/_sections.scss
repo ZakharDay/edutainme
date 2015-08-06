@@ -1,5 +1,5 @@
 .statement {
-  header {
+  & > header {
     background-color: $blue;
     overflow: auto;
 
@@ -18,8 +18,41 @@
   }
 
   .point {
+    header {
+      display: block;
+      position: relative;
+
+      img {
+        position: absolute;
+        z-index: -1;
+        top: -135px;
+        left: -30px;
+      }
+
+      .sectionNumberWrapper{
+        position: relative;
+        margin: 310px auto 0;
+        width: 100px;
+        height: 100px;
+
+        @include transform(rotate(45deg));
+
+        border: 1px solid black;
+
+        .sectionNumber {
+          position: absolute;
+          left: 25px;
+          top: 45px;
+
+          @include transform(rotate(-45deg));
+          @include ptmono(26px);
+          text-align: center;
+        }
+      }
+    }
+
     h3 {
-      margin-top: 595px;
+      margin-top: 185px;
       @include ptsans(100px, bold);
       line-height: 110px;
       margin-bottom: 72px;
