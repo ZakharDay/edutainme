@@ -3,7 +3,7 @@
 
   h2 {
     margin-bottom: 45px;
-    @include ptsans(70px, bold);
+    @include ptsanscaption(70px, bold);
     line-height: 80px;
   }
 
@@ -39,7 +39,7 @@
         display: block;
         margin-top: 86px;
         text-align: center;
-        @include ptsans(30px, bold);
+        @include ptsanscaption(30px, bold);
 
         small {
           @include ptsans(23px);

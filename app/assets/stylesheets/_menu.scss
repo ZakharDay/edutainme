@@ -6,6 +6,8 @@
   right: 0;
   width: 720px;
   background-color: black;
+  max-height: 100%;
+  overflow: scroll;
 
 
   header {
@@ -25,7 +27,7 @@
       display: block;
       padding: 38px 118px ;
 
-      @include ptsans(30px, bold);
+      @include ptsanscaption(30px, bold);
       text-transform: uppercase;
       text-decoration: none;
       color: white;

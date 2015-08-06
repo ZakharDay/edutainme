@@ -11,12 +11,12 @@
   h2 {
     margin-top: 140px;
     margin-bottom: 40px;
-    @include ptsans(70px, bold);
+    @include ptsanscaption(70px, bold);
     line-height: 80px;
   }
 
   p {
-    @include ptsans(28px);
+    @include ptsanscaption(28px);
     line-height: 45px;
   }
 
@@ -27,7 +27,7 @@
     padding: 40px 148px;
     background-color: $blue;
 
-    @include ptsans(36px, bold);
+    @include ptsanscaption(36px, bold);
     line-height: 40px;
     text-decoration: none;
 

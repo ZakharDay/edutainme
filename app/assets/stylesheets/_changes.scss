@@ -4,7 +4,7 @@
 
   h3 {
     margin-top: 595px;
-    @include ptsans(100px, bold);
+    @include ptsanscaption(100px, bold);
     line-height: 110px;
     margin-bottom: 120px;
   }
@@ -37,7 +37,7 @@
     }
 
     th {
-      @include ptsans(50px, bold);
+      @include ptsanscaption(50px, bold);
       text-align: center;
     }
 

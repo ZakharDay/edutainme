@@ -4,7 +4,7 @@
     padding: 55px 55px 0;
 
     span {
-      @include ptsans(23px, bold);
+      @include ptsanscaption(23px, bold);
 
 
       a {
@@ -60,7 +60,7 @@
   h1 {
     margin: 120px auto 107px;
     width: 984px;
-    @include ptsans(110px, bold);
+    @include ptsanscaption(110px, bold);
     line-height: 122px;
     letter-spacing: 2px;
 
@@ -90,7 +90,7 @@
         margin-left: 18px;
         position: absolute;
         display: block;
-        @include ptsans(18px);
+        @include ptsanscaption(18px);
         letter-spacing: 0;
         line-height: 30px;
 
@@ -114,7 +114,7 @@
 
   h2 {
     margin-bottom: 45px;
-    @include ptsans(70px, bold);
+    @include ptsanscaption(70px, bold);
     line-height: 80px;
   }
 
@@ -128,7 +128,7 @@
     display: block;
     position: relative;
     margin-top: 50px;
-    @include ptsans(36px, bold);
+    @include ptsanscaption(36px, bold);
     text-decoration: none;
     color: black;
     @include transition(all 250ms ease-in);

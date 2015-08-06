@@ -53,7 +53,7 @@
 
     h3 {
       margin-top: 185px;
-      @include ptsans(100px, bold);
+      @include ptsanscaption(100px, bold);
       line-height: 110px;
       margin-bottom: 72px;
       & + p {
