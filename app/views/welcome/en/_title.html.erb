@@ -1,0 +1,48 @@
+<section class="patterned" id="header">
+  <header>
+    <span>
+      <!-- implement this as a heper / conditional-->
+      <%= link_to "RU", ru_path %>
+    </span>
+    <a class="burgerButton" id="menuButton">
+      <div></div>
+      <div></div>
+      <div></div>
+    </a>
+    <%= render "welcome/en/menu" %>
+  </header>
+
+  <div class="centered" id="atf">
+    <h1>
+      Digital education <br>
+      environment&nbsp;mani-festo
+      <span class="inlineImg"><%= image_tag "edutainme-logo.png" %></span>
+      <span class="inlineText">
+        <small>Non-profit initiative of <br><br> project <a href="http://www.edutainme.ru/">Edutainme</a></small>
+      </span>
+    </h1>
+    <a href="#preface" class="chevron centered bouncy">
+      <%= image_tag "chevron.png" %>
+    </a>
+  </div>
+
+  <div class="bordered centered content" id="preface">
+
+    <h2>
+      Foreword
+    </h2>
+
+    <p>Everything around us is changing at an increasingly high speed. A fundamental shift has been taking place away from the conditions under which our present educational system was constructed, and a new learning environment is being established. In this environment, it is not always a simple task to continue on with the old materials and methods, but on the other hand, new possibilities are arising. </p>
+
+    <p>Success in the creation and use of new techniques, however, depends on understanding the educational paradigm: the goal of education is not the assimilation of knowledge, but rather the development of an independent personality. </p>
+
+    <p>The purpose of this manifesto is to declare the principles for bringing to life digital learning environments where students will not be the objects of study but rather the subjects – that is, they will be able to directly influence their own development.</p>
+
+    <p>We hope that these principles will form the basis for government policy in the field of education, helping bring together developers and teachers, and provide an opportunity to understand common problems and define future educational projects.</p>
+
+    <a href="#s1">
+      Читать манифест
+      <%= image_tag "arrow-kinked.png", class: "bouncy" %>
+    </a>
+  </div>
+</section>

@@ -2,14 +2,14 @@
   <header>
     <span>
       <!-- implement this as a heper / conditional-->
-      <%= link_to "ENG", "#" %>
+      <%= link_to "ENG", en_path %>
     </span>
     <a class="burgerButton" id="menuButton">
       <div></div>
       <div></div>
       <div></div>
     </a>
-    <%= render "menu" %>
+    <%= render "welcome/ru/menu" %>
   </header>
 
   <div class="centered" id="atf">
@@ -20,7 +20,7 @@
       среде
       <span class="inlineImg"><%= image_tag "edutainme-logo.png" %></span>
       <span class="inlineText">
-        <small>Некоммерческая инициатива <br> проекта <a href="http://www.edutainme.ru/">Edutainme</a></small>
+        <small>Некоммерческая инициатива <br><br> проекта <a href="http://www.edutainme.ru/">Edutainme</a></small>
       </span>
     </h1>
     <a href="#preface" class="chevron centered bouncy">
