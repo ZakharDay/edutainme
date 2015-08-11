@@ -3,7 +3,7 @@
   overflow: auto;
   text-align: center;
 
-  h2, p, a {
+  h2, p, div {
     color: white;
     text-align: center;
   }
@@ -20,12 +20,15 @@
     line-height: 45px;
   }
 
-  a {
+  .social-likes_single-w {
     display: inline-block;
+    position: relative;
     margin-top: 78px;
     margin-bottom: 146px;
     padding: 40px 148px;
     background-color: $blue;
+
+    cursor: pointer;
 
     @include ptsanscaption(36px, bold);
     line-height: 40px;
@@ -33,6 +36,43 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    .share {
+      display: none;
+
+      &.social-likes_opened {
+        position: absolute;
+        display: inline-block;
+        top: -270px !important;
+        left: 0 !important;
+        background: white image-url("pattern.png"); // this is experimental
+        border: 15px solid $blue;
+        width: 719px;
+
+        .social-likes__widget {
+          height: 120px;
+          color: black;
+
+          .social-likes__button {
+            line-height: 120px;
+          }
+        }
+      }
+
+      .social-likes__widget_facebook:hover,
+      .social-likes__widget_facebook:active,
+      .social-likes__widget_facebook:focus {
+        background: $facebookColor;
+        color: white;
+      }
+
+      .social-likes__widget_vkontakte:hover,
+      .social-likes__widget_vkontakte:active,
+      .social-likes__widget_vkontakte:focus {
+        background: $vkColor;
+        color: white;
+      }
     }
   }
 }
