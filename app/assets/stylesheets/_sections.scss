@@ -4,15 +4,16 @@
     overflow: auto;
 
     h2 {
-      margin: 158px auto; //replace with top + bottom
-      @include ptmono(70px);
-      line-height: 85px;
+      margin-top: 82px;
+      margin-bottom: 110px;
+      @include ptmono(50px);
+      line-height: 68px;
       letter-spacing: 1px;
       color: white;
 
       img {
         display: block;
-        margin-bottom: 65px;
+        margin-bottom: 45px;
       }
     }
   }
@@ -21,6 +22,7 @@
     header {
       display: block;
       position: relative;
+      width: 654px;
 
       img {
         position: absolute;
@@ -31,9 +33,9 @@
 
       .sectionNumberWrapper{
         position: relative;
-        margin: 310px auto 0;
-        width: 100px;
-        height: 100px;
+        margin: 316px auto 76px;
+        width: 78px;
+        height: 78px;
 
         @include transform(rotate(45deg));
 
@@ -41,32 +43,31 @@
 
         .sectionNumber {
           position: absolute;
-          left: 25px;
-          top: 45px;
+          left: 20px;
+          top: 35px;
 
           @include transform(rotate(-45deg));
-          @include ptmono(26px);
+          @include ptmono(20px);
           text-align: center;
         }
       }
     }
 
     h3 {
-      margin-top: 185px;
-      @include ptsanscaption(100px, bold);
-      line-height: 110px;
-      margin-bottom: 72px;
+      @include ptsanscaption(75px, bold);
+      line-height: 86px;
+      margin-bottom: 57px;
       & + p {
         margin-top: -4px;
       }
     }
 
     h4 {
-      margin-top: 55px;
-      margin-bottom: 53px;
+      margin-top: 46px;
+      margin-bottom: 46px;
       text-align: center;
-      @include georgia(38px, normal, italic);
-      line-height: 50px;
+      @include georgia(28px, normal, italic);
+      line-height: 38px;
     }
 
     .line {
@@ -79,12 +80,12 @@
     }
 
     p {
-      @include georgia(25px);
-      line-height: 42px;
-      margin-bottom: 43px;
+      @include georgia(22px);
+      line-height: 33px;
+      margin-bottom: 36px;
 
       &:last-child {
-        margin-bottom: 257px;
+        margin-bottom: -10px;
       }
     }
 

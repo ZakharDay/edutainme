@@ -13,18 +13,22 @@ html, body {
 .centered {
   margin: auto;
 
+  &#mainHeader {
+    width: 726px;
+  }
+
   &.content {
-    width: $sectionContentWidth;
+    width: 574px;
+  }
+
+  &.bordered {
+    border: 10px solid $blue;
+    padding: 86px;
   }
 
   &.table {
     width: 785px;
   }
-}
-
-.bordered {
-  border: 15px solid $blue;
-  padding: 117px 122px 105px 115px
 }
 
 
