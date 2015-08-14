@@ -1,16 +1,6 @@
 #authors {
-  padding-bottom: 225px;
-
-  h2 {
-    margin-bottom: 45px;
-    @include ptsanscaption(70px, bold);
-    line-height: 80px;
-  }
-
-  p {
-    @include ptsans(28px);
-    line-height: 45px;
-  }
+  padding-top: 135px;
+  padding-bottom: 135px;
 
   .authors {
     text-align: center;

@@ -1,5 +1,6 @@
 #header {
   padding-bottom: 135px;
+
   header {
     padding: 55px 55px 0;
 
@@ -107,24 +108,12 @@
   .chevron {
     display: block;
     width: 36px;
-    margin-bottom: 205px;
+    margin-bottom: 135px;
   }
 
 }
 
 #preface {
-
-  h2 {
-    margin-bottom: 45px;
-    @include ptsanscaption(60px, bold);
-    line-height: 65px;
-  }
-
-  p {
-    @include ptsans(20px);
-    line-height: 33px;
-    margin-bottom: 35px;
-  }
 
   a {
     display: block;

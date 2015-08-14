@@ -24,10 +24,22 @@ html, body {
   &.bordered {
     border: 10px solid $blue;
     padding: 86px;
+
+    h2 {
+      margin-bottom: 45px;
+      @include ptsanscaption(60px, bold);
+      line-height: 65px;
+    }
+
+    p {
+      @include georgia(20px);
+      line-height: 33px;
+      margin-bottom: 35px;
+    }
   }
 
   &.table {
-    width: 785px;
+    width: 574px;
   }
 }
 

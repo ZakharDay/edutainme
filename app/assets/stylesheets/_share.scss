@@ -9,10 +9,11 @@
   }
 
   h2 {
+    width: 766px;
     margin-top: 140px;
     margin-bottom: 40px;
-    @include ptsanscaption(70px, bold);
-    line-height: 80px;
+    @include ptsanscaption(75px, bold);
+    line-height: 86px;
   }
 
   p {
