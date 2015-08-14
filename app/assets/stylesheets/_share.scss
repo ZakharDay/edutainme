@@ -12,8 +12,10 @@
     width: 766px;
     margin-top: 140px;
     margin-bottom: 40px;
-    @include ptsanscaption(75px, bold);
-    line-height: 86px;
+    // @include ptsanscaption(75px, bold);
+    // line-height: 86px;
+    @include ptsanscaption(56px, bold);
+    line-height: 63px;
   }
 
   p {

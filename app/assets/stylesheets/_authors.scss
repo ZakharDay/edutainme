@@ -4,17 +4,18 @@
 
   .authors {
     text-align: center;
-    margin-top: 106px;
     width: 100%;
+
+    &.coauthors {
+      figure {
+        width: 220px;
+      }
+    }
 
     figure {
       width: 285px;
       display: inline-block;
-      margin:0 auto 36px;
-
-      &:last-child {
-        margin-bottom: -35px;
-      }
+      margin-top: 100px;
 
       figcaption{
         display: block;
@@ -23,11 +24,11 @@
         @include ptsanscaption(20px, bold);
 
         small {
+          margin-top: 8px;
           @include ptsans(16px);
           color: gray;
           display: block;
           text-align: center;
-          line-height: 54px;
         }
       }
     }

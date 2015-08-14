@@ -1,12 +1,13 @@
 html, body {
   @include georgia();
-  @include box-sizing(border-box)
+  @include box-sizing(border-box);
+  min-width: 996px;
 }
 
 .patterned {
   background: image-url("pattern.png");
   background-size: 200%;
-  background-position: -1110px -60px;
+  background-position: -1110px -140px;
   background-repeat: repeat;
 }
 
@@ -22,19 +23,37 @@ html, body {
   }
 
   &.bordered {
+    box-sizing: border-box;
+    width: 800px;
     border: 10px solid $blue;
-    padding: 86px;
+    padding: 86px 0;
+    background-color: white;
 
     h2 {
-      margin-bottom: 45px;
-      @include ptsanscaption(60px, bold);
-      line-height: 65px;
+      margin: 86px 0 36px 86px;
+      @include ptsanscaption(56px, bold);
+      line-height: 63px;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    h3 {
+      margin: 186px 0 0 86px;
+      @include ptsanscaption(48px, bold);
+      line-height: 1.2;
+
+      a {
+        color: black;
+      }
     }
 
     p {
-      @include georgia(20px);
-      line-height: 33px;
-      margin-bottom: 35px;
+      width: calc(100% - 86px - 86px);
+      margin: 0 auto 35px;
+      @include georgia(23px);
+      line-height: 34px;
     }
   }
 

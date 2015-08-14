@@ -59,6 +59,7 @@
 #mainHeader {
 
   h1 {
+    width: 800px;
     margin-top: 70px;
     margin-bottom: 90px;
     @include ptsanscaption(90px, bold);
@@ -68,6 +69,7 @@
       display: inline-block;
       position: relative;
       width: 150px;
+      margin-left: 50px;
 
       img {
         width: 100%;
@@ -118,7 +120,9 @@
   a {
     display: block;
     position: relative;
+    width: 297px;
     margin-top: 50px;
+    margin-left: 86px;
     @include ptsanscaption(26px, bold);
     text-decoration: none;
     color: black;
