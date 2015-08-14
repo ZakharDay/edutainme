@@ -8,31 +8,22 @@
     width: 100%;
 
     figure {
-      width: 49.7%;
+      width: 285px;
       display: inline-block;
-      margin:0 auto 93px;
+      margin:0 auto 36px;
 
       &:last-child {
-        margin-bottom: 46px;
-      }
-
-      .photo {
-        margin:0 auto;
-        display: block;
-        width: 170px;
-        height: 170px;
-        background-color: blue;
-        @include transform(rotate(45deg))
+        margin-bottom: -35px;
       }
 
       figcaption{
         display: block;
-        margin-top: 86px;
+        margin-top: 32px;
         text-align: center;
-        @include ptsanscaption(30px, bold);
+        @include ptsanscaption(20px, bold);
 
         small {
-          @include ptsans(23px);
+          @include ptsans(16px);
           color: gray;
           display: block;
           text-align: center;
