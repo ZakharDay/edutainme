@@ -8,3 +8,13 @@ $ ->
 
   $("#closeMenuButton").click ->
     $("#sidebarMenu").fadeOut()
+
+  $('.scrollTo').each ->
+    $(this).on 'click', (e) ->
+      e.preventDefault()
+
+      scrollTo = $(this).attr('href')
+
+      $('html,body').animate
+        scrollTop: $(scrollTo).offset().top
+      , 1000
