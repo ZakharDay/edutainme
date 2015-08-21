@@ -1,63 +1,10 @@
-#header {
+#titleSection {
   padding-bottom: 135px;
-
-  header {
-    padding: 55px 55px 0;
-
-    span {
-      @include ptsanscaption(23px, bold);
-
-
-      a {
-        color: black;
-        text-decoration: none;
-        letter-spacing: 1px;
-
-        &.active {
-          color: $blue;
-          cursor: not-allowed;
-        }
-
-        &:not(.active):hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .burgerButton {
-      display: inline-block;
-      width: 35px;
-      float:right;
-      cursor: pointer;
-
-      div {
-        height: 3px;
-        background-color: black;
-
-        @include transition(all 250ms ease-in);
-
-        &:nth-child(2) {
-          margin: 6px 0;
-        }
-      }
-
-      &:hover div {
-        background-color: $blue;
-
-        &:nth-child(1) {
-          @include transform(translate(0, -2px))
-        }
-
-        &:nth-child(3) {
-          @include transform(translate(0, 2px))
-        }
-      }
-    }
-  }
 }
 
-#mainHeader {
-
+#welcomeSection {
+  width: 726px;
+  
   h1 {
     width: 800px;
     margin-top: 70px;

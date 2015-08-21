@@ -1,10 +1,11 @@
-#menu {
+#sidebarMenu {
   position: fixed;
   display: none;
   z-index: 100;
   top: 0;
-  right: 0;
+  left: 0;
   width: 654px;
+  // height: 100%;
   background-color: black;
   max-height: 100%;
 
@@ -18,7 +19,7 @@
     }
   }
 
-  nav {
+  ul {
     display: block;
     margin-bottom: 116px;
 

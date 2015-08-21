@@ -13,53 +13,49 @@ html, body {
 
 .centered {
   margin: auto;
+}
 
-  &#mainHeader {
-    width: 726px;
-  }
+.content {
+  width: 574px;
+}
 
-  &.content {
-    width: 574px;
-  }
+.bordered {
+  box-sizing: border-box;
+  width: 800px;
+  border: 10px solid $blue;
+  padding: 86px 0;
+  background-color: white;
 
-  &.bordered {
-    box-sizing: border-box;
-    width: 800px;
-    border: 10px solid $blue;
-    padding: 86px 0;
-    background-color: white;
+  h2 {
+    margin: 86px 0 36px 86px;
+    @include ptsanscaption(56px, bold);
+    line-height: 63px;
 
-    h2 {
-      margin: 86px 0 36px 86px;
-      @include ptsanscaption(56px, bold);
-      line-height: 63px;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
-
-    h3 {
-      margin: 186px 0 0 86px;
-      @include ptsanscaption(48px, bold);
-      line-height: 1.2;
-
-      a {
-        color: black;
-      }
-    }
-
-    p {
-      width: calc(100% - 86px - 86px);
-      margin: 0 auto 35px;
-      @include georgia(23px);
-      line-height: 34px;
+    &:first-of-type {
+      margin-top: 0;
     }
   }
 
-  &.table {
-    width: 574px;
+  h3 {
+    margin: 186px 0 0 86px;
+    @include ptsanscaption(48px, bold);
+    line-height: 1.2;
+
+    a {
+      color: black;
+    }
   }
+
+  p {
+    width: calc(100% - 86px - 86px);
+    margin: 0 auto 35px;
+    @include georgia(23px);
+    line-height: 34px;
+  }
+}
+
+.table {
+  width: 574px;
 }
 
 
@@ -75,6 +71,6 @@ html, body {
   animation-iteration-count: infinite;
 }
 
-.blue{
+.blue {
   color: $blue;
 }

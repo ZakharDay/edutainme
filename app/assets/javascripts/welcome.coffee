@@ -4,8 +4,7 @@
 
 $ ->
   $("#menuButton").click ->
-    $("#menu").fadeIn()
+    $("#sidebarMenu").fadeIn()
 
   $("#closeMenuButton").click ->
-    $("#menu").fadeOut()
-
+    $("#sidebarMenu").fadeOut()
