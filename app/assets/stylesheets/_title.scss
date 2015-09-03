@@ -4,10 +4,10 @@
 
 #welcomeSection {
   width: 726px;
-  
+  padding-top: 70px;
+
   h1 {
     width: 800px;
-    margin-top: 70px;
     margin-bottom: 90px;
     @include ptsanscaption(90px, bold);
     line-height: 100px;
