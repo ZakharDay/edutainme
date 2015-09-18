@@ -1,98 +1,50 @@
-#header {
-  padding-bottom: 164px;
-  header {
-    padding: 55px 55px 0;
-
-    span {
-      @include ptsanscaption(23px, bold);
-
-
-      a {
-        color: black;
-        text-decoration: none;
-        letter-spacing: 1px;
-
-        &.active {
-          color: $blue;
-          cursor: not-allowed;
-        }
-
-        &:not(.active):hover {
-          text-decoration: underline;
-        }
-      }
-    }
-
-    .burgerButton {
-      display: inline-block;
-      width: 35px;
-      float:right;
-      cursor: pointer;
-
-      div {
-        height: 3px;
-        background-color: black;
-
-        @include transition(all 250ms ease-in);
-
-        &:nth-child(2) {
-          margin: 6px 0;
-        }
-      }
-
-      &:hover div {
-        background-color: $blue;
-
-        &:nth-child(1) {
-          @include transform(translate(0, -2px))
-        }
-
-        &:nth-child(3) {
-          @include transform(translate(0, 2px))
-        }
-      }
-    }
-  }
+#titleSection {
+  padding-bottom: 135px;
 }
 
-#atf {
+#welcomeSection {
+  width: 726px;
+  padding-top: 70px;
 
   h1 {
-    margin: 120px auto 107px;
-    width: 984px;
-    @include ptsanscaption(110px, bold);
-    line-height: 122px;
-    letter-spacing: 2px;
+    width: 800px;
+    margin-bottom: 90px;
+    @include ptsanscaption(90px, bold);
+    line-height: 100px;
 
     .inlineImg {
       display: inline-block;
       position: relative;
-      width: 192px;
+      width: 150px;
+      margin-left: 50px;
 
       img {
+        width: 100%;
         position: absolute;
-        bottom: -15px;
-        left: -11px;
+        bottom: -10px;
+        left: -10px;
       }
     }
 
     .inlineText {
       display: inline-block;
       position: relative;
-      height: 45px;
+      height: 38px;
       border-left: 2px solid gray;
-      width: 295px;
-      margin-left: -17px;
-      margin-bottom: 6px;
-      padding-bottom: 6px;
+      width: 260px;
+      margin-left: -20px;
+      margin-bottom: 5px;
 
       small {
-        margin-left: 18px;
+        margin-left: 12px;
         position: absolute;
         display: block;
-        @include ptsanscaption(18px);
-        letter-spacing: 0;
-        line-height: 30px;
+        @include ptsanscaption(16px);
+        line-height: 13px;
+
+        br:last-child {
+          line-height: 14px;
+        }
 
 
         a {
@@ -105,30 +57,20 @@
   .chevron {
     display: block;
     width: 36px;
-    margin-bottom: 205px;
+    margin-bottom: 135px;
   }
 
 }
 
 #preface {
 
-  h2 {
-    margin-bottom: 45px;
-    @include ptsanscaption(70px, bold);
-    line-height: 80px;
-  }
-
-  p {
-    @include ptsans(28px);
-    line-height: 45px;
-    margin-bottom: 46px;
-  }
-
   a {
     display: block;
     position: relative;
+    width: 297px;
     margin-top: 50px;
-    @include ptsanscaption(36px, bold);
+    margin-left: 86px;
+    @include ptsanscaption(26px, bold);
     text-decoration: none;
     color: black;
     @include transition(all 250ms ease-in);
@@ -139,7 +81,7 @@
 
     img {
       position: absolute;
-      margin-top: 17px;
+      margin-top: 12px;
       margin-left: 12px;
     }
   }

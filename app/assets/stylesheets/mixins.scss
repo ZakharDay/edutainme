@@ -20,6 +20,6 @@
 }
 
 @mixin ptmono($size: 1em) {
-  font-family: "PT Mono", Mono;
+  font-family: "PT Mono", monospace;
   font-size: $size;
 }

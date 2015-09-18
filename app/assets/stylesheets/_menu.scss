@@ -1,17 +1,20 @@
-#menu {
+#sidebarMenu {
   position: fixed;
-  display: none;
+  // display: none;
   z-index: 100;
   top: 0;
-  right: 0;
-  width: 720px;
+  left: 0;
+  width: 330px;
+  height: 100%;
   background-color: black;
   max-height: 100%;
-  overflow: scroll;
 
 
   header {
-    padding: 40px;
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 16px;
 
     img {
       float: right;
@@ -19,22 +22,34 @@
     }
   }
 
-  nav {
+  ul {
     display: block;
     margin-bottom: 116px;
+    padding-top: 29px;
 
     a {
       display: block;
-      padding: 38px 118px ;
+      padding: 30px;
 
-      @include ptsanscaption(30px, bold);
+      @include ptsanscaption(20px, bold);
       text-transform: uppercase;
       text-decoration: none;
       color: white;
 
-      &:hover {
+      &:hover,
+      &.active {
         background-color: $blue;
       }
+    }
+  }
+}
+
+@media only screen and (max-width : 1240px) {
+  #sidebarMenu {
+    display: none;
+
+    header {
+      display: block;
     }
   }
 }

@@ -2,30 +2,38 @@
   background-color: #252525;
   overflow: auto;
   text-align: center;
+  height: 100%;
 
-  h2, p, a {
+  h2, p, div {
     color: white;
     text-align: center;
   }
 
   h2 {
+    width: 766px;
     margin-top: 140px;
     margin-bottom: 40px;
-    @include ptsanscaption(70px, bold);
-    line-height: 80px;
+    // @include ptsanscaption(75px, bold);
+    // line-height: 86px;
+    @include ptsanscaption(56px, bold);
+    line-height: 63px;
   }
 
   p {
-    @include ptsanscaption(28px);
+    @include ptsans(25px);
     line-height: 45px;
   }
 
-  a {
+  .social-likes_single-w {
+    width: 574px;
     display: inline-block;
+    position: relative;
     margin-top: 78px;
     margin-bottom: 146px;
-    padding: 40px 148px;
+    padding: 40px 0;
     background-color: $blue;
+
+    cursor: pointer;
 
     @include ptsanscaption(36px, bold);
     line-height: 40px;
@@ -33,6 +41,44 @@
 
     &:hover {
       text-decoration: underline;
+    }
+
+    .share {
+      display: none;
+
+      &.social-likes_opened {
+        @include box-sizing(border-box);
+        position: absolute;
+        display: inline-block;
+        width: 574px;
+        top: -270px !important;
+        left: 0 !important;
+        background: white image-url("pattern.png"); // this is experimental
+        border: 15px solid $blue;
+
+        .social-likes__widget {
+          height: 120px;
+          color: black;
+
+          .social-likes__button {
+            line-height: 120px;
+          }
+        }
+      }
+
+      .social-likes__widget_facebook:hover,
+      .social-likes__widget_facebook:active,
+      .social-likes__widget_facebook:focus {
+        background: $facebookColor;
+        color: white;
+      }
+
+      .social-likes__widget_vkontakte:hover,
+      .social-likes__widget_vkontakte:active,
+      .social-likes__widget_vkontakte:focus {
+        background: $vkColor;
+        color: white;
+      }
     }
   }
 }
