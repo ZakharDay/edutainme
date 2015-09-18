@@ -6,13 +6,15 @@ set :rbenv_ruby, '2.2.2'
 
 set :application, 'edutainme'
 set :repo_url, 'git@github.com:ZakharDay/edutainme.git'
-set :branch, 'menu'
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# For deploy from current branch
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deployer/apps/#{fetch :application}"
+
+set :puma_init_active_record, true
+set :puma_conf, -> { File.join(shared_path, 'config', 'puma.rb') }
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -27,7 +29,7 @@ set :deploy_to, "/home/deployer/apps/#{fetch :application}"
 set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml', 'config/puma.rb')
 
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
