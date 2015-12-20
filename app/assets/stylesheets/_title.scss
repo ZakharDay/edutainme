@@ -64,7 +64,7 @@
 
 #preface {
 
-  img {
+  img:not(.bouncy) {
     display: block;
     margin: 60px auto 80px;
   }
