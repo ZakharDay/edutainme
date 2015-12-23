@@ -6,7 +6,7 @@ set :rbenv_ruby, '2.2.2'
 
 set :application, 'edutainme'
 set :repo_url, 'git@github.com:ZakharDay/edutainme.git'
-set :branch, 'menu'
+set :branch, 'master'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
