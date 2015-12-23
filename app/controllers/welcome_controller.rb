@@ -2,11 +2,11 @@ class WelcomeController < ApplicationController
   before_filter :get_images
 
   def ru
-    @title = 'Манифест о цифровой образовательной среде'
+    @lang = 'ru'
   end
 
   def en
-    @title = 'Digital Education Environment Manifesto'
+    @lang = 'en'
   end
 
   private
