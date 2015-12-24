@@ -2,7 +2,7 @@ html, body {
   @include georgia();
   @include box-sizing(border-box);
   min-width: 996px;
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
