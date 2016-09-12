@@ -12,9 +12,14 @@
   }
 
   h4 {
-    margin: 186px 0 0 86px;
+    margin: 26px 0 0 86px;
     @include ptsanscaption(18px, bold);
     line-height: 1.2;
+  }
+
+  .faces {
+    display: block;
+    margin: 50px auto;
   }
 
   .authors {

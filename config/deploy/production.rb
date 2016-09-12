@@ -43,6 +43,7 @@ server '46.101.190.106', roles: %w{app db web}, user: 'deployer'
 # --------------
  set :ssh_options, {
    user: 'deployer',
+  #  port: 1040,
    forward_agent: true,
    auth_methods: %w(publickey)
  }
