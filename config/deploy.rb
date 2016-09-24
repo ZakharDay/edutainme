@@ -8,11 +8,14 @@ set :application, 'edutainme'
 set :repo_url, 'git@github.com:ZakharDay/edutainme.git'
 set :branch, 'master'
 
-# Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# For deploy from current branch
+ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deployer/apps/#{fetch :application}"
+
+set :puma_init_active_record, true
+set :puma_conf, -> { File.join(shared_path, 'config', 'puma.rb') }
 
 # Default value for :scm is :git
 # set :scm, :git
