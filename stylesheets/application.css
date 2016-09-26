@@ -1,0 +1,696 @@
+html, body {
+  font-family: Georgia, serif;
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 996px;
+  min-height: 100%;
+}
+
+body > section, body > footer {
+  width: calc(100% - 330px);
+  margin-left: 330px;
+}
+
+@media only screen and (max-width: 1240px) {
+  body > section,
+  body > footer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.patterned {
+  background: url(../images/pattern.png);
+  background-size: 200%;
+  background-position: -1110px -140px;
+  background-repeat: repeat;
+}
+
+.centered {
+  margin: auto;
+}
+
+.content {
+  width: 574px;
+}
+
+.bordered {
+  box-sizing: border-box;
+  width: 800px;
+  border: 10px solid #2035f9;
+  padding: 86px 0;
+  background-color: white;
+}
+
+.bordered h2 {
+  margin: 86px 0 36px 86px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 63px;
+}
+
+.bordered h2:first-of-type {
+  margin-top: 0;
+}
+
+.bordered h3 {
+  margin: 186px 0 0 86px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+.bordered h3 a {
+  color: black;
+}
+
+.bordered p {
+  width: calc(100% - 86px - 86px);
+  margin: 0 auto 35px;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 34px;
+}
+
+.table {
+  width: 574px;
+}
+
+.bouncy:hover {
+  animation-name: bounce;
+  animation-duration: 1250ms;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  50% {
+    -moz-transform: translate(0, 10px);
+    -ms-transform: translate(0, 10px);
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+  }
+  100% {
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+.blue {
+  color: #2035f9;
+}
+
+#menubar {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: fixed;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 55px 55px 0;
+}
+
+#menubar a {
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+#menubar a.active {
+  color: #2035f9;
+  cursor: not-allowed;
+}
+
+#menubar a:not(.active):hover {
+  text-decoration: underline;
+}
+
+#menubar .burgerMenu {
+  display: inline-block;
+  width: 35px;
+  cursor: pointer;
+}
+
+#menubar .burgerMenu div {
+  height: 3px;
+  background-color: black;
+  -moz-transition: all 250ms ease-in;
+  -o-transition: all 250ms ease-in;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+#menubar .burgerMenu div:nth-child(2) {
+  margin: 6px 0;
+}
+
+#menubar .burgerMenu:hover div {
+  background-color: #2035f9;
+}
+
+#menubar .burgerMenu:hover div:nth-child(1) {
+  -moz-transform: translate(0, -2px);
+  -ms-transform: translate(0, -2px);
+  -webkit-transform: translate(0, -2px);
+  transform: translate(0, -2px);
+}
+
+#menubar .burgerMenu:hover div:nth-child(3) {
+  -moz-transform: translate(0, 2px);
+  -ms-transform: translate(0, 2px);
+  -webkit-transform: translate(0, 2px);
+  transform: translate(0, 2px);
+}
+
+#sidebarMenu {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 330px;
+  height: 100%;
+  background-color: black;
+  max-height: 100%;
+}
+
+#sidebarMenu header {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 16px;
+}
+
+#sidebarMenu header img {
+  float: right;
+  cursor: pointer;
+}
+
+#sidebarMenu ul {
+  display: block;
+  margin-bottom: 116px;
+  padding-top: 29px;
+}
+
+#sidebarMenu ul a {
+  display: block;
+  padding: 30px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+#sidebarMenu ul a:hover, #sidebarMenu ul a.active {
+  background-color: #2035f9;
+}
+
+@media only screen and (max-width: 1240px) {
+  #sidebarMenu {
+    display: none;
+  }
+
+  #sidebarMenu header {
+    display: block;
+  }
+}
+
+#titleSection {
+  padding-bottom: 135px;
+}
+
+#welcomeSection {
+  width: 726px;
+  padding-top: 70px;
+}
+
+#welcomeSection h1 {
+  width: 800px;
+  margin-bottom: 90px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 100px;
+}
+
+#welcomeSection h1 .inlineImg {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  margin-left: 50px;
+}
+
+#welcomeSection h1 .inlineImg img {
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+}
+
+#welcomeSection h1 .inlineText {
+  display: inline-block;
+  position: relative;
+  height: 38px;
+  border-left: 2px solid gray;
+  width: 260px;
+  margin-left: -20px;
+  margin-bottom: 5px;
+}
+
+#welcomeSection h1 .inlineText small {
+  margin-left: 12px;
+  position: absolute;
+  display: block;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 13px;
+}
+
+#welcomeSection h1 .inlineText small br:last-child {
+  line-height: 14px;
+}
+
+#welcomeSection h1 .inlineText small a {
+  color: #2035f9;
+}
+
+#welcomeSection .chevron {
+  display: block;
+  width: 36px;
+  margin-bottom: 135px;
+}
+
+#preface img:not(.bouncy) {
+  display: block;
+  margin: 60px auto 80px;
+}
+
+#preface a {
+  display: block;
+  position: relative;
+  width: 297px;
+  margin-top: 50px;
+  margin-left: 86px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  -moz-transition: all 250ms ease-in;
+  -o-transition: all 250ms ease-in;
+  -webkit-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+#preface a:hover {
+  color: #2035f9;
+}
+
+#preface a img {
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.statement {
+  margin-bottom: 135px;
+}
+
+.statement > header {
+  background-color: #2035f9;
+  overflow: auto;
+}
+
+.statement > header h2 {
+  margin-top: 82px;
+  margin-bottom: 110px;
+  font-family: "PT Mono", monospace;
+  font-size: 50px;
+  line-height: 68px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.statement > header h2 img {
+  display: block;
+  margin-bottom: 45px;
+}
+
+.statement .point .illustration {
+  width: 100%;
+  margin-top: 200px;
+}
+
+.statement .point .illustration.bottomMargin {
+  margin: 0 0 80px;
+}
+
+.statement .point .illustration.resetMargin {
+  margin: 0;
+}
+
+.statement .point header {
+  display: block;
+  position: relative;
+  width: 654px;
+}
+
+.statement .point header img {
+  position: absolute;
+  z-index: -1;
+  top: -109px;
+  left: 143px;
+}
+
+.statement .point header .sectionNumberWrapper {
+  position: relative;
+  margin: 316px auto 76px;
+  width: 78px;
+  height: 78px;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border: 1px solid black;
+}
+
+.statement .point header .sectionNumberWrapper .sectionNumber {
+  position: absolute;
+  left: 20px;
+  top: 35px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  font-family: "PT Mono", monospace;
+  font-size: 20px;
+  text-align: center;
+}
+
+.statement .point h3 {
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 86px;
+  margin-bottom: 57px;
+}
+
+.statement .point h3 + p {
+  margin-top: -4px;
+}
+
+.statement .point h4 {
+  margin-top: 46px;
+  margin-bottom: 46px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 38px;
+}
+
+.statement .point .line {
+  height: 2px;
+  width: 100px;
+  background-color: black;
+}
+
+.statement .point .line + p {
+  margin-top: 70px;
+}
+
+.statement .point p {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 33px;
+  margin-bottom: 36px;
+}
+
+.statement .point p:last-child {
+  margin-bottom: -10px;
+}
+
+.statement .point h5 {
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  margin-top: 46px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+#changes {
+  margin-bottom: 165px;
+}
+
+#changes h3 {
+  margin-top: 273px;
+  margin-bottom: 100px;
+  width: 654px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 75px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 86px;
+}
+
+#changes h4 {
+  margin-bottom: 53px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 38px;
+}
+
+#changes table {
+  margin-bottom: 120px;
+}
+
+#changes table th, #changes table td {
+  border-bottom: 2px solid gray;
+  line-height: 133px;
+}
+
+#changes table th.arrow, #changes table td.arrow {
+  width: 85px;
+}
+
+#changes table th.arrow img, #changes table td.arrow img {
+  display: block;
+  margin: auto;
+}
+
+#changes table th:not(.arrow), #changes table td:not(.arrow) {
+  width: 350px;
+}
+
+#changes table th {
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+}
+
+#changes table td {
+  padding: 45px 0;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 33px;
+}
+
+#changes table td:first-child {
+  padding-right: 68px;
+}
+
+#changes table td:last-child {
+  padding-left: 68px;
+}
+
+
+#authors {
+  padding-top: 135px;
+  padding-bottom: 135px;
+}
+
+#authors h3 a:hover {
+  color: blue;
+  text-decoration: none;
+}
+
+#authors h4 {
+  margin: 26px 0 0 86px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1.2;
+}
+
+#authors .faces {
+  display: block;
+  margin: 50px auto;
+}
+
+#authors .authors {
+  text-align: center;
+  width: 100%;
+}
+
+#authors .authors.coauthors figure {
+  width: 220px;
+}
+
+#authors .authors figure {
+  width: 285px;
+  display: inline-block;
+  margin-top: 100px;
+}
+
+#authors .authors figure figcaption {
+  display: block;
+  margin-top: 32px;
+  text-align: center;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+#authors .authors figure figcaption small {
+  margin-top: 8px;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  color: gray;
+  display: block;
+  text-align: center;
+}
+
+
+#sign {
+  background-color: #252525;
+  overflow: auto;
+  text-align: center;
+}
+
+#sign h2, #sign p, #sign div {
+  color: white;
+  text-align: center;
+}
+
+#sign h2 {
+  width: 766px;
+  margin-top: 140px;
+  margin-bottom: 40px;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 63px;
+}
+
+#sign p {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 25px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 45px;
+}
+
+#sign .social-likes_single-w {
+  width: 574px;
+  display: inline-block;
+  position: relative;
+  margin-top: 78px;
+  padding: 40px 0;
+  background-color: #2035f9;
+  cursor: pointer;
+  font-family: "PT Sans Caption", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+#sign .social-likes_single-w:hover {
+  text-decoration: underline;
+}
+
+#sign .social-likes_single-w .share {
+  display: none;
+}
+
+#sign .social-likes_single-w .share.social-likes_opened {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  display: inline-block;
+  width: 574px;
+  top: -270px !important;
+  left: 0 !important;
+  background: white url(../images/pattern.png);
+  border: 15px solid #2035f9;
+}
+
+#sign .social-likes_single-w .share.social-likes_opened .social-likes__widget {
+  height: 120px;
+  color: black;
+}
+
+#sign .social-likes_single-w .share.social-likes_opened .social-likes__widget .social-likes__button {
+  line-height: 120px;
+}
+
+#sign .social-likes_single-w .share .social-likes__widget_facebook:hover,
+#sign .social-likes_single-w .share .social-likes__widget_facebook:active,
+#sign .social-likes_single-w .share .social-likes__widget_facebook:focus {
+  background: #425497;
+  color: white;
+}
+
+#sign .social-likes_single-w .share .social-likes__widget_vkontakte:hover,
+#sign .social-likes_single-w .share .social-likes__widget_vkontakte:active,
+#sign .social-likes_single-w .share .social-likes__widget_vkontakte:focus {
+  background: #526e8f;
+  color: white;
+}
